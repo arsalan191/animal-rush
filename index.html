@@ -236,31 +236,21 @@ nav a:hover {
         #ffe65a,
         #ffae00
     );
-
     color: #111;
-
     padding: 10px 16px;
-
     border-radius: 10px;
-
     font-weight: 800;
-
     font-size: 13px;
-
     transition: .3s;
-
     box-shadow:
         0 0 10px #ffcc0033;
 }
 
 .order-small:hover {
-
     transform: translateY(-3px);
-
     box-shadow:
         0 0 15px #ffcc0099,
         0 0 30px #ff990044;
-
 }
 
 /* =========================
@@ -268,21 +258,13 @@ nav a:hover {
 ========================= */
 
 .hero {
-
     min-height: 460px;
-
     display: flex;
-
     align-items: center;
-
     justify-content: center;
-
     text-align: center;
-
     padding: 65px 20px;
-
     position: relative;
-
     overflow: hidden;
 
     background:
@@ -294,55 +276,33 @@ nav a:hover {
         );
 
     border-bottom: 2px solid #b58b00;
-
     z-index: 1;
-
 }
 
 .hero::before {
-
     content: "🪙";
-
     position: absolute;
-
     font-size: 180px;
-
     opacity: .12;
-
     left: 4%;
-
     top: 25px;
-
     transform: rotate(-20deg);
-
 }
 
 .hero::after {
-
     content: "🐾";
-
     position: absolute;
-
     font-size: 180px;
-
     opacity: .09;
-
     right: 5%;
-
     bottom: 10px;
-
     transform: rotate(20deg);
-
 }
 
 .hero-content {
-
     position: relative;
-
     z-index: 2;
-
     animation: heroFloat 5s ease-in-out infinite;
-
 }
 
 @keyframes heroFloat {
@@ -359,15 +319,8 @@ nav a:hover {
 }
 
 .hero h1 {
-
-    font-size: clamp(
-        48px,
-        9vw,
-        90px
-    );
-
+    font-size: clamp(48px, 9vw, 90px);
     font-weight: 900;
-
     color: var(--gold);
 
     text-shadow:
@@ -376,49 +329,31 @@ nav a:hover {
         0 0 70px #ff990033;
 
     line-height: 1.4;
-
     direction: ltr;
-
 }
 
 .hero h2 {
-
-    font-size: clamp(
-        20px,
-        4vw,
-        32px
-    );
-
+    font-size: clamp(20px, 4vw, 32px);
     margin: 12px 0;
-
 }
 
 .hero h2 span {
-
     color: var(--gold);
-
 }
 
 .hero p {
-
     color: #cccccc;
-
     font-size: 16px;
-
     margin: 15px 0 30px;
-
 }
 
 /* =========================
-   BUTTON
+   BUTTONS
 ========================= */
 
 .gold-button {
-
     display: inline-block;
-
     position: relative;
-
     overflow: hidden;
 
     background:
@@ -430,15 +365,11 @@ nav a:hover {
         );
 
     color: #111111;
-
     padding: 14px 30px;
-
     border-radius: 13px;
 
     font-family: inherit;
-
     font-size: 16px;
-
     font-weight: 900;
 
     box-shadow:
@@ -446,27 +377,16 @@ nav a:hover {
         0 0 12px #ffcc0033;
 
     transition: .3s;
-
     cursor: pointer;
-
     border: none;
-
 }
 
-/* برق روی دکمه */
-
 .gold-button::before {
-
     content: "";
-
     position: absolute;
-
     top: 0;
-
     left: -120%;
-
     width: 70%;
-
     height: 100%;
 
     background:
@@ -478,13 +398,10 @@ nav a:hover {
         );
 
     transform: skewX(-20deg);
-
     transition: left .6s ease;
-
 }
 
 .gold-button:hover {
-
     transform:
         translateY(-4px)
         scale(1.02);
@@ -493,13 +410,10 @@ nav a:hover {
         0 8px 30px #ffb90088,
         0 0 20px #ffcc00aa,
         0 0 45px #ff990044;
-
 }
 
 .gold-button:hover::before {
-
     left: 150%;
-
 }
 
 /* =========================
@@ -507,43 +421,27 @@ nav a:hover {
 ========================= */
 
 section {
-
     padding: 65px 7%;
-
     position: relative;
-
     z-index: 1;
-
 }
 
 .section-title {
-
     text-align: center;
-
     font-size: 29px;
-
     font-weight: 900;
-
     margin-bottom: 10px;
-
 }
 
 .section-title span {
-
     color: var(--gold);
-
 }
 
 .section-subtitle {
-
     text-align: center;
-
     color: #999999;
-
     margin-bottom: 40px;
-
     font-size: 14px;
-
 }
 
 /* =========================
@@ -551,26 +449,17 @@ section {
 ========================= */
 
 .products {
-
     display: grid;
-
     grid-template-columns:
         repeat(
             auto-fit,
-            minmax(
-                260px,
-                340px
-            )
+            minmax(260px, 340px)
         );
-
     justify-content: center;
-
     gap: 25px;
-
 }
 
 .product {
-
     background:
         linear-gradient(
             145deg,
@@ -579,79 +468,49 @@ section {
         );
 
     border: 2px solid #b58b00;
-
     border-radius: 22px;
-
     padding: 28px 22px;
-
     text-align: center;
 
     box-shadow:
         0 0 25px #ffb9000c;
 
     transition: .3s;
-
     position: relative;
-
     overflow: hidden;
-
 }
 
 .product:hover {
+    transform: translateY(-8px);
 
-    transform:
-        translateY(-8px);
-
-    border-color:
-        #ffe15a;
+    border-color: #ffe15a;
 
     box-shadow:
         0 10px 35px #ffb90025,
         0 0 25px #ffcc0022;
-
 }
 
 .product.popular {
-
-    border-color:
-        var(--gold);
-
+    border-color: var(--gold);
 }
 
 .popular-label {
-
     display: inline-block;
+    background: var(--gold);
+    color: #111;
 
-    background:
-        var(--gold);
+    border-radius: 20px;
+    padding: 5px 15px;
 
-    color:
-        #111;
+    font-size: 12px;
+    font-weight: 900;
 
-    border-radius:
-        20px;
-
-    padding:
-        5px 15px;
-
-    font-size:
-        12px;
-
-    font-weight:
-        900;
-
-    margin-bottom:
-        10px;
-
+    margin-bottom: 10px;
 }
 
 .coin {
-
-    font-size:
-        75px;
-
-    margin:
-        10px 0;
+    font-size: 75px;
+    margin: 10px 0;
 
     filter:
         drop-shadow(
@@ -660,49 +519,33 @@ section {
 
     animation:
         coinFloat 3s ease-in-out infinite;
-
 }
 
 @keyframes coinFloat {
 
     0%,
     100% {
-        transform:
-            translateY(0);
+        transform: translateY(0);
     }
 
     50% {
-        transform:
-            translateY(-8px);
+        transform: translateY(-8px);
     }
 
 }
 
 .product h3 {
-
-    font-size:
-        36px;
-
-    color:
-        var(--gold);
-
-    font-weight:
-        900;
-
+    font-size: 36px;
+    color: var(--gold);
+    font-weight: 900;
 }
 
 .product .unit {
-
-    color:
-        #bbbbbb;
-
-    margin-bottom:
-        20px;
-
+    color: #bbbbbb;
+    margin-bottom: 20px;
 }
 
 .price {
-
     background:
         linear-gradient(
             90deg,
@@ -710,37 +553,20 @@ section {
             #ffad00
         );
 
-    color:
-        #111111;
+    color: #111111;
+    padding: 12px;
+    border-radius: 10px;
 
-    padding:
-        12px;
+    font-size: 23px;
+    font-weight: 900;
 
-    border-radius:
-        10px;
-
-    font-size:
-        23px;
-
-    font-weight:
-        900;
-
-    margin:
-        20px 0;
-
+    margin: 20px 0;
 }
 
 .product .gold-button {
-
-    width:
-        100%;
-
-    padding:
-        13px;
-
-    font-size:
-        15px;
-
+    width: 100%;
+    padding: 13px;
+    font-size: 15px;
 }
 
 /* =========================
@@ -748,106 +574,67 @@ section {
 ========================= */
 
 .features {
-
-    background:
-        #0e0e0e;
-
-    border-top:
-        1px solid #292000;
-
-    border-bottom:
-        1px solid #292000;
-
+    background: #0e0e0e;
+    border-top: 1px solid #292000;
+    border-bottom: 1px solid #292000;
 }
 
 .feature-grid {
-
-    display:
-        grid;
+    display: grid;
 
     grid-template-columns:
         repeat(
             auto-fit,
-            minmax(
-                190px,
-                1fr
-            )
+            minmax(190px, 1fr)
         );
 
-    gap:
-        18px;
-
+    gap: 18px;
 }
 
 .feature {
+    background: #141414;
+    border: 1px solid #493900;
+    border-radius: 14px;
 
-    background:
-        #141414;
+    padding: 25px 15px;
 
-    border:
-        1px solid #493900;
-
-    border-radius:
-        14px;
-
-    padding:
-        25px 15px;
-
-    text-align:
-        center;
-
-    transition:
-        .3s;
-
+    text-align: center;
+    transition: .3s;
 }
 
 .feature:hover {
-
-    border-color:
-        var(--gold);
-
-    transform:
-        translateY(-5px);
+    border-color: var(--gold);
+    transform: translateY(-5px);
 
     box-shadow:
         0 0 20px #ffcc0020;
-
 }
 
 .feature .icon {
-
-    font-size:
-        38px;
-
-    margin-bottom:
-        10px;
-
+    font-size: 38px;
+    margin-bottom: 10px;
 }
 
 .feature h3 {
-
-    color:
-        var(--gold);
-
-    font-size:
-        17px;
-
-    margin-bottom:
-        8px;
-
+    color: var(--gold);
+    font-size: 17px;
+    margin-bottom: 8px;
 }
 
 .feature p {
+    font-size: 13px;
+    color: #aaaaaa;
+    line-height: 2;
+}
 
-    font-size:
-        13px;
+/* =========================
+   SUPPORT BUTTON
+========================= */
 
-    color:
-        #aaaaaa;
-
-    line-height:
-        2;
-
+.support-button {
+    margin-top: 15px;
+    padding: 11px 20px;
+    font-size: 14px;
 }
 
 /* =========================
@@ -855,15 +642,9 @@ section {
 ========================= */
 
 .contact-box {
-
-    max-width:
-        700px;
-
-    margin:
-        auto;
-
-    text-align:
-        center;
+    max-width: 700px;
+    margin: auto;
+    text-align: center;
 
     background:
         linear-gradient(
@@ -872,44 +653,25 @@ section {
             #101010
         );
 
-    border:
-        1px solid #9e7900;
+    border: 1px solid #9e7900;
+    border-radius: 20px;
 
-    border-radius:
-        20px;
-
-    padding:
-        35px 20px;
+    padding: 35px 20px;
 
     box-shadow:
         0 0 35px #ffbb0010;
-
 }
 
 .contact-box h2 {
-
-    color:
-        var(--gold);
-
-    font-size:
-        26px;
-
-    margin-bottom:
-        12px;
-
+    color: var(--gold);
+    font-size: 26px;
+    margin-bottom: 12px;
 }
 
 .contact-box p {
-
-    color:
-        #bbbbbb;
-
-    margin-bottom:
-        25px;
-
-    line-height:
-        2;
-
+    color: #bbbbbb;
+    margin-bottom: 25px;
+    line-height: 2;
 }
 
 /* =========================
@@ -917,58 +679,28 @@ section {
 ========================= */
 
 footer {
+    background: #101010;
+    border-top: 2px solid var(--gold);
 
-    background:
-        #101010;
+    padding: 30px 7%;
 
-    border-top:
-        2px solid var(--gold);
+    text-align: center;
 
-    padding:
-        30px 7%;
+    color: #999999;
+    font-size: 13px;
 
-    text-align:
-        center;
-
-    color:
-        #999999;
-
-    font-size:
-        13px;
-
-    position:
-        relative;
-
-    z-index:
-        2;
-
+    position: relative;
+    z-index: 2;
 }
 
 footer .logo {
-
-    margin-bottom:
-        12px;
-
-}
-
-footer strong {
-
-    color:
-        var(--gold);
-
+    margin-bottom: 12px;
 }
 
 .rubika-id {
-
-    color:
-        var(--gold);
-
-    margin-top:
-        10px;
-
-    direction:
-        ltr;
-
+    color: var(--gold);
+    margin-top: 10px;
+    direction: ltr;
 }
 
 /* =========================
@@ -978,76 +710,44 @@ footer strong {
 @media(max-width:700px) {
 
     header {
-
-        padding:
-            12px 4%;
-
-        gap:
-            10px;
-
+        padding: 12px 4%;
+        gap: 10px;
     }
 
     .logo {
-
-        font-size:
-            18px;
-
+        font-size: 18px;
     }
 
     nav {
-
-        gap:
-            12px;
-
+        gap: 12px;
     }
 
     nav a {
-
-        font-size:
-            11px;
-
+        font-size: 11px;
     }
 
     .order-small {
-
-        display:
-            none;
-
+        display: none;
     }
 
     .hero {
-
-        min-height:
-            370px;
-
+        min-height: 370px;
     }
 
     .hero p {
-
-        font-size:
-            14px;
-
+        font-size: 14px;
     }
 
     section {
-
-        padding:
-            45px 5%;
-
+        padding: 45px 5%;
     }
 
     .products {
-
-        grid-template-columns:
-            1fr;
-
+        grid-template-columns: 1fr;
     }
 
     .section-title {
-
-        font-size:
-            24px;
-
+        font-size: 24px;
     }
 
 }
@@ -1056,15 +756,12 @@ footer strong {
    REDUCE MOTION
 ========================= */
 
-@media(prefers-reduced-motion:reduce) {
+@media(prefers-reduced-motion: reduce) {
 
     .star,
     .hero-content,
     .coin {
-
-        animation:
-            none !important;
-
+        animation: none !important;
     }
 
 }
@@ -1074,7 +771,7 @@ footer strong {
 
 <body>
 
-<!-- ✨ STARS -->
+<!-- STAR BACKGROUND -->
 
 <div class="star-field">
 
@@ -1136,10 +833,7 @@ footer strong {
 
 <main>
 
-<section
-    class="hero"
-    id="home"
->
+<section class="hero" id="home">
 
     <div class="hero-content">
 
@@ -1176,21 +870,19 @@ footer strong {
 <section id="products">
 
     <h2 class="section-title">
-
         بسته‌های
         <span>
             سکه 🪙
         </span>
-
     </h2>
 
     <p class="section-subtitle">
-
         بسته مورد نظرت رو انتخاب کن و سفارش بده!
-
     </p>
 
     <div class="products">
+
+        <!-- 1000 COINS -->
 
         <div class="product">
 
@@ -1220,6 +912,8 @@ footer strong {
             </a>
 
         </div>
+
+        <!-- 5000 COINS -->
 
         <div class="product popular">
 
@@ -1260,27 +954,22 @@ footer strong {
 
 <!-- FEATURES -->
 
-<section
-    class="features"
-    id="features"
->
+<section class="features" id="features">
 
     <h2 class="section-title">
-
         چرا
         <span>
             Animal Rush؟
         </span>
-
     </h2>
 
     <p class="section-subtitle">
-
         تجربه‌ای راحت برای خرید سکه بازی
-
     </p>
 
     <div class="feature-grid">
+
+        <!-- FAST DELIVERY -->
 
         <div class="feature">
 
@@ -1299,6 +988,8 @@ footer strong {
 
         </div>
 
+        <!-- SAFE BUY -->
+
         <div class="feature">
 
             <div class="icon">
@@ -1315,6 +1006,8 @@ footer strong {
             </p>
 
         </div>
+
+        <!-- PRICE -->
 
         <div class="feature">
 
@@ -1333,6 +1026,8 @@ footer strong {
 
         </div>
 
+        <!-- SUPPORT -->
+
         <div class="feature">
 
             <div class="icon">
@@ -1344,9 +1039,16 @@ footer strong {
             </h3>
 
             <p>
-                ارتباط با فروشنده
-                برای پیگیری سفارش
+                برای دریافت پشتیبانی
+                روی دکمه زیر کلیک کن
             </p>
+
+            <a
+                href="po.html"
+                class="gold-button support-button"
+            >
+                🎧 ورود به پشتیبانی
+            </a>
 
         </div>
 
