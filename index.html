@@ -4,13 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#080808">
-    <meta name="description" content="فروش سکه بازی Animal Rush با قیمت مناسب">
-    <title>Animal Rush | فروش سکه</title>
+    <meta name="description" content="فروش سکه و اشتراک ویژه بازی Animal Rush">
+    <title>Animal Rush | فروش سکه و اشتراک ویژه</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
     <style>
+
         * {
             margin: 0;
             padding: 0;
@@ -40,6 +41,7 @@
             text-decoration: none;
         }
 
+
         /* =========================
            STAR BACKGROUND
         ========================= */
@@ -60,9 +62,11 @@
             height: 3px;
             border-radius: 50%;
             background: #fff5a8;
+
             box-shadow:
                 0 0 6px #ffcc00,
                 0 0 14px #ff9900;
+
             opacity: .6;
 
             animation:
@@ -155,6 +159,7 @@
         }
 
         @keyframes floatStar {
+
             0% {
                 transform: translateY(0) translateX(0);
             }
@@ -166,9 +171,11 @@
             100% {
                 transform: translateY(0) translateX(0);
             }
+
         }
 
         @keyframes glowStar {
+
             0% {
                 opacity: .25;
                 transform: scale(.7);
@@ -178,7 +185,9 @@
                 opacity: 1;
                 transform: scale(1.5);
             }
+
         }
+
 
         /* =========================
            HEADER
@@ -187,12 +196,16 @@
         header {
             min-height: 72px;
             padding: 12px 7%;
+
             display: flex;
             align-items: center;
             justify-content: space-between;
+
             gap: 20px;
+
             background: #101010;
             border-bottom: 2px solid var(--gold);
+
             position: sticky;
             top: 0;
             z-index: 100;
@@ -202,9 +215,11 @@
             color: var(--gold);
             font-size: 25px;
             font-weight: 900;
+
             text-shadow:
                 0 0 10px #ffae00,
                 0 0 25px #ff990055;
+
             white-space: nowrap;
         }
 
@@ -226,20 +241,25 @@
         }
 
         .order-small {
-            background: linear-gradient(
-                135deg,
-                #ffe65a,
-                #ffae00
-            );
+            background:
+                linear-gradient(
+                    135deg,
+                    #ffe65a,
+                    #ffae00
+                );
 
             color: #111;
+
             padding: 10px 16px;
             border-radius: 10px;
+
             font-weight: 800;
             font-size: 13px;
+
             transition: .3s;
 
-            box-shadow: 0 0 10px #ffcc0033;
+            box-shadow:
+                0 0 10px #ffcc0033;
         }
 
         .order-small:hover {
@@ -250,17 +270,22 @@
                 0 0 30px #ff990044;
         }
 
+
         /* =========================
            HERO
         ========================= */
 
         .hero {
-            min-height: 460px;
+            min-height: 500px;
+
             display: flex;
             align-items: center;
             justify-content: center;
+
             text-align: center;
+
             padding: 65px 20px;
+
             position: relative;
             overflow: hidden;
 
@@ -273,48 +298,64 @@
                 );
 
             border-bottom: 2px solid #b58b00;
+
             z-index: 1;
         }
 
         .hero::before {
             content: "🪙";
+
             position: absolute;
+
             font-size: 180px;
             opacity: .12;
+
             left: 4%;
             top: 25px;
+
             transform: rotate(-20deg);
         }
 
         .hero::after {
             content: "🐾";
+
             position: absolute;
+
             font-size: 180px;
             opacity: .09;
+
             right: 5%;
             bottom: 10px;
+
             transform: rotate(20deg);
         }
 
         .hero-content {
             position: relative;
             z-index: 2;
-            animation: heroFloat 5s ease-in-out infinite;
+
+            animation:
+                heroFloat 5s ease-in-out infinite;
         }
 
         @keyframes heroFloat {
-            0%, 100% {
+
+            0%,
+            100% {
                 transform: translateY(0);
             }
 
             50% {
                 transform: translateY(-5px);
             }
+
         }
 
         .hero h1 {
             font-size: clamp(48px, 9vw, 90px);
+
             font-weight: 900;
+
             color: var(--gold);
 
             text-shadow:
@@ -323,6 +364,7 @@
                 0 0 70px #ff990033;
 
             line-height: 1.4;
+
             direction: ltr;
         }
 
@@ -338,15 +380,27 @@
         .hero p {
             color: #cccccc;
             font-size: 16px;
+
             margin: 15px 0 30px;
         }
+
 
         /* =========================
            BUTTONS
         ========================= */
 
+        .hero-buttons {
+            display: flex;
+            flex-direction: column;
+
+            align-items: center;
+
+            gap: 12px;
+        }
+
         .gold-button {
             display: inline-block;
+
             position: relative;
             overflow: hidden;
 
@@ -359,10 +413,13 @@
                 );
 
             color: #111111;
+
             padding: 14px 30px;
+
             border-radius: 13px;
 
             font-family: inherit;
+
             font-size: 16px;
             font-weight: 900;
 
@@ -371,15 +428,20 @@
                 0 0 12px #ffcc0033;
 
             transition: .3s;
+
             cursor: pointer;
+
             border: none;
         }
 
         .gold-button::before {
             content: "";
+
             position: absolute;
+
             top: 0;
             left: -120%;
+
             width: 70%;
             height: 100%;
 
@@ -392,6 +454,7 @@
                 );
 
             transform: skewX(-20deg);
+
             transition: left .6s ease;
         }
 
@@ -408,20 +471,34 @@
             left: 150%;
         }
 
+        .special-button {
+            background:
+                linear-gradient(
+                    135deg,
+                    #fff05c,
+                    #ffb000,
+                    #ff6a00
+                );
+        }
+
+
         /* =========================
            SECTIONS
         ========================= */
 
         section {
             padding: 65px 7%;
+
             position: relative;
             z-index: 1;
         }
 
         .section-title {
             text-align: center;
+
             font-size: 29px;
             font-weight: 900;
+
             margin-bottom: 10px;
         }
 
@@ -431,10 +508,14 @@
 
         .section-subtitle {
             text-align: center;
+
             color: #999999;
+
             margin-bottom: 40px;
+
             font-size: 14px;
         }
+
 
         /* =========================
            PRODUCTS
@@ -442,10 +523,15 @@
 
         .products {
             display: grid;
+
             grid-template-columns:
-                repeat(auto-fit, minmax(260px, 340px));
+                repeat(
+                    auto-fit,
+                    minmax(260px, 340px)
+                );
 
             justify-content: center;
+
             gap: 25px;
         }
 
@@ -458,14 +544,20 @@
                 );
 
             border: 2px solid #b58b00;
+
             border-radius: 22px;
+
             padding: 28px 22px;
+
             text-align: center;
 
-            box-shadow: 0 0 25px #ffb9000c;
+            box-shadow:
+                0 0 25px #ffb9000c;
 
             transition: .3s;
+
             position: relative;
+
             overflow: hidden;
         }
 
@@ -481,14 +573,20 @@
 
         .product.popular {
             border-color: var(--gold);
+
+            box-shadow:
+                0 0 25px #ffcc0020;
         }
 
         .popular-label {
             display: inline-block;
+
             background: var(--gold);
+
             color: #111;
 
             border-radius: 20px;
+
             padding: 5px 15px;
 
             font-size: 12px;
@@ -499,6 +597,7 @@
 
         .coin {
             font-size: 75px;
+
             margin: 10px 0;
 
             filter:
@@ -511,23 +610,29 @@
         }
 
         @keyframes coinFloat {
-            0%, 100% {
+
+            0%,
+            100% {
                 transform: translateY(0);
             }
 
             50% {
                 transform: translateY(-8px);
             }
+
         }
 
         .product h3 {
             font-size: 36px;
+
             color: var(--gold);
+
             font-weight: 900;
         }
 
         .product .unit {
             color: #bbbbbb;
+
             margin-bottom: 20px;
         }
 
@@ -540,7 +645,9 @@
                 );
 
             color: #111111;
+
             padding: 12px;
+
             border-radius: 10px;
 
             font-size: 23px;
@@ -551,9 +658,79 @@
 
         .product .gold-button {
             width: 100%;
+
             padding: 13px;
+
             font-size: 15px;
         }
+
+
+        /* =========================
+           SPECIAL SUBSCRIPTION
+        ========================= */
+
+        #special {
+            background:
+                linear-gradient(
+                    180deg,
+                    #080808,
+                    #130d00,
+                    #080808
+                );
+
+            border-top: 1px solid #493900;
+            border-bottom: 1px solid #493900;
+        }
+
+        .special-section-title {
+            font-size: 32px;
+        }
+
+        .special-card {
+            border: 2px solid #ff9900;
+
+            box-shadow:
+                0 0 25px #ff990022,
+                0 0 50px #ff990011;
+        }
+
+        .special-card:hover {
+            border-color: #ffcc00;
+
+            box-shadow:
+                0 10px 35px #ff990044,
+                0 0 30px #ffcc0033;
+        }
+
+        .special-badge {
+            display: inline-block;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    #ffcc00,
+                    #ff8800
+                );
+
+            color: #111;
+
+            padding: 6px 16px;
+
+            border-radius: 20px;
+
+            font-size: 13px;
+            font-weight: 900;
+
+            margin-bottom: 8px;
+        }
+
+        .special-card .coin {
+            filter:
+                drop-shadow(
+                    0 0 20px #ff8800
+                );
+        }
+
 
         /* =========================
            FEATURES
@@ -561,24 +738,32 @@
 
         .features {
             background: #0e0e0e;
+
             border-top: 1px solid #292000;
             border-bottom: 1px solid #292000;
         }
 
         .feature-grid {
             display: grid;
+
             grid-template-columns:
-                repeat(auto-fit, minmax(190px, 1fr));
+                repeat(
+                    auto-fit,
+                    minmax(190px, 1fr)
+                );
 
             gap: 18px;
         }
 
         .feature {
             background: #141414;
+
             border: 1px solid #493900;
+
             border-radius: 14px;
 
             padding: 25px 15px;
+
             text-align: center;
 
             transition: .3s;
@@ -586,6 +771,7 @@
 
         .feature:hover {
             border-color: var(--gold);
+
             transform: translateY(-5px);
 
             box-shadow:
@@ -594,20 +780,26 @@
 
         .feature .icon {
             font-size: 38px;
+
             margin-bottom: 10px;
         }
 
         .feature h3 {
             color: var(--gold);
+
             font-size: 17px;
+
             margin-bottom: 8px;
         }
 
         .feature p {
             font-size: 13px;
+
             color: #aaaaaa;
+
             line-height: 2;
         }
+
 
         /* =========================
            SUPPORT BUTTON
@@ -615,9 +807,12 @@
 
         .support-button {
             margin-top: 15px;
+
             padding: 11px 20px;
+
             font-size: 14px;
         }
+
 
         /* =========================
            CONTACT
@@ -625,7 +820,9 @@
 
         .contact-box {
             max-width: 700px;
+
             margin: auto;
+
             text-align: center;
 
             background:
@@ -636,6 +833,7 @@
                 );
 
             border: 1px solid #9e7900;
+
             border-radius: 20px;
 
             padding: 35px 20px;
@@ -646,15 +844,20 @@
 
         .contact-box h2 {
             color: var(--gold);
+
             font-size: 26px;
+
             margin-bottom: 12px;
         }
 
         .contact-box p {
             color: #bbbbbb;
+
             margin-bottom: 25px;
+
             line-height: 2;
         }
+
 
         /* =========================
            FOOTER
@@ -662,15 +865,19 @@
 
         footer {
             background: #101010;
+
             border-top: 2px solid var(--gold);
 
             padding: 30px 7%;
+
             text-align: center;
 
             color: #999999;
+
             font-size: 13px;
 
             position: relative;
+
             z-index: 2;
         }
 
@@ -680,9 +887,12 @@
 
         .rubika-id {
             color: var(--gold);
+
             margin-top: 10px;
+
             direction: ltr;
         }
+
 
         /* =========================
            MOBILE
@@ -692,6 +902,7 @@
 
             header {
                 padding: 12px 4%;
+
                 gap: 10px;
             }
 
@@ -712,7 +923,7 @@
             }
 
             .hero {
-                min-height: 370px;
+                min-height: 430px;
             }
 
             .hero p {
@@ -730,7 +941,16 @@
             .section-title {
                 font-size: 24px;
             }
+
+            .hero-buttons {
+                width: 100%;
+            }
+
+            .hero-buttons .gold-button {
+                width: min(100%, 320px);
+            }
         }
+
 
         /* =========================
            REDUCE MOTION
@@ -743,15 +963,19 @@
             .coin {
                 animation: none !important;
             }
+
         }
+
     </style>
 </head>
 
 <body>
 
+
     <!-- STAR BACKGROUND -->
 
     <div class="star-field">
+
         <span class="star"></span>
         <span class="star"></span>
         <span class="star"></span>
@@ -764,6 +988,7 @@
         <span class="star"></span>
         <span class="star"></span>
         <span class="star"></span>
+
     </div>
 
 
@@ -776,10 +1001,27 @@
         </div>
 
         <nav>
-            <a href="#home">صفحه اصلی</a>
-            <a href="#products">بسته‌های سکه</a>
-            <a href="#features">مزایا</a>
-            <a href="#contact">تماس با ما</a>
+
+            <a href="#home">
+                صفحه اصلی
+            </a>
+
+            <a href="#products">
+                بسته‌های سکه
+            </a>
+
+            <a href="#special">
+                اشتراک ویژه
+            </a>
+
+            <a href="#features">
+                مزایا
+            </a>
+
+            <a href="#contact">
+                تماس با ما
+            </a>
+
         </nav>
 
         <a
@@ -798,7 +1040,10 @@
 
     <main>
 
-        <section class="hero" id="home">
+        <section
+            class="hero"
+            id="home"
+        >
 
             <div class="hero-content">
 
@@ -808,7 +1053,9 @@
 
                 <h2>
                     فروش سکه بازی
-                    <span>Animal Rush</span>
+                    <span>
+                        Animal Rush
+                    </span>
                 </h2>
 
                 <p>
@@ -817,12 +1064,24 @@
                     با قیمت مناسب و سفارش آسان از روبیکا
                 </p>
 
-                <a
-                    class="gold-button"
-                    href="#products"
-                >
-                    🪙 مشاهده بسته‌های سکه
-                </a>
+
+                <div class="hero-buttons">
+
+                    <a
+                        class="gold-button"
+                        href="#products"
+                    >
+                        🪙 مشاهده بسته‌های سکه
+                    </a>
+
+                    <a
+                        class="gold-button special-button"
+                        href="#special"
+                    >
+                        🔥 مشاهده اشتراک ویژه
+                    </a>
+
+                </div>
 
             </div>
 
@@ -834,8 +1093,13 @@
         <section id="products">
 
             <h2 class="section-title">
+
                 بسته‌های
-                <span>سکه 🪙</span>
+
+                <span>
+                    سکه 🪙
+                </span>
+
             </h2>
 
             <p class="section-subtitle">
@@ -977,6 +1241,64 @@
 
                 </div>
 
+            </div>
+
+        </section>
+
+
+        <!-- SPECIAL SUBSCRIPTION -->
+
+        <section id="special">
+
+            <h2 class="section-title special-section-title">
+
+                اشتراک
+
+                <span>
+                    ویژه 🔥
+                </span>
+
+            </h2>
+
+            <p class="section-subtitle">
+                با اشتراک ویژه امکانات بیشتری دریافت کن!
+            </p>
+
+
+            <div class="products">
+
+                <div class="product special-card">
+
+                    <div class="special-badge">
+                        🔥 اشتراک ویژه
+                    </div>
+
+                    <div class="coin">
+                        👑
+                    </div>
+
+                    <h3>
+                        اشتراک ویژه
+                    </h3>
+
+                    <p class="unit">
+                        Animal Rush Premium
+                    </p>
+
+                    <div class="price">
+                        به‌زودی
+                    </div>
+
+                    <a
+                        class="gold-button special-button"
+                        href="https://rubika.ir/rokh221"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        🔥 سفارش اشتراک
+                    </a>
+
+                </div>
 
             </div>
 
@@ -991,8 +1313,13 @@
         >
 
             <h2 class="section-title">
+
                 چرا
-                <span>Animal Rush؟</span>
+
+                <span>
+                    Animal Rush؟
+                </span>
+
             </h2>
 
             <p class="section-subtitle">
