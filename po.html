@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#080808">
+
+    <title>پشتیبانی | Animal Rush</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --gold: #ffcc00;
+            --gold2: #ff9900;
+            --black: #080808;
+        }
+
+        body {
+            font-family: 'Vazirmatn', Tahoma, sans-serif;
+            background: #080808;
+            color: white;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        /* BACKGROUND */
+
+        .background {
+            position: fixed;
+            inset: 0;
+            overflow: hidden;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .star {
+            position: absolute;
+            width: 3px;
+            height: 3px;
+            background: #fff5a8;
+            border-radius: 50%;
+
+            box-shadow:
+                0 0 8px #ffcc00,
+                0 0 18px #ff9900;
+
+            animation: float 6s ease-in-out infinite alternate;
+        }
+
+        .star:nth-child(1) {
+            left: 8%;
+            top: 20%;
+            animation-duration: 5s;
+        }
+
+        .star:nth-child(2) {
+            left: 20%;
+            top: 70%;
+            animation-duration: 8s;
+        }
+
+        .star:nth-child(3) {
+            left: 35%;
+            top: 30%;
+            animation-duration: 6s;
+        }
+
+        .star:nth-child(4) {
+            left: 50%;
+            top: 80%;
+            animation-duration: 7s;
+        }
+
+        .star:nth-child(5) {
+            left: 65%;
+            top: 20%;
+            animation-duration: 9s;
+        }
+
+        .star:nth-child(6) {
+            left: 78%;
+            top: 60%;
+            animation-duration: 6s;
+        }
+
+        .star:nth-child(7) {
+            left: 90%;
+            top: 30%;
+            animation-duration: 8s;
+        }
+
+        .star:nth-child(8) {
+            left: 45%;
+            top: 45%;
+            animation-duration: 5s;
+        }
+
+        @keyframes float {
+
+            0% {
+                transform: translateY(0) translateX(0);
+                opacity: .3;
+            }
+
+            50% {
+                opacity: 1;
+            }
+
+            100% {
+                transform: translateY(-35px) translateX(12px);
+                opacity: .4;
+            }
+
+        }
+
+        /* HEADER */
+
+        header {
+            position: relative;
+            z-index: 2;
+
+            background: #101010;
+            border-bottom: 2px solid var(--gold);
+
+            padding: 20px 7%;
+
+            text-align: center;
+
+            box-shadow: 0 0 20px #ffcc0022;
+        }
+
+        .logo {
+            color: var(--gold);
+            font-size: 27px;
+            font-weight: 900;
+
+            text-shadow:
+                0 0 10px #ffcc00,
+                0 0 25px #ff9900;
+        }
+
+        /* MAIN */
+
+        main {
+            position: relative;
+            z-index: 1;
+
+            min-height: calc(100vh - 150px);
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            padding: 60px 20px;
+        }
+
+        .support-container {
+            width: 100%;
+            max-width: 900px;
+            text-align: center;
+        }
+
+        .title {
+            font-size: 45px;
+            font-weight: 900;
+
+            color: var(--gold);
+
+            text-shadow:
+                0 0 15px #ffcc00,
+                0 0 35px #ff9900;
+
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            color: #aaa;
+            font-size: 15px;
+            margin-bottom: 40px;
+        }
+
+        /* CARDS */
+
+        .cards {
+            display: grid;
+
+            grid-template-columns:
+                repeat(
+                    auto-fit,
+                    minmax(250px, 1fr)
+                );
+
+            gap: 22px;
+        }
+
+        .card {
+            background:
+                linear-gradient(
+                    145deg,
+                    #191919,
+                    #0d0d0d
+                );
+
+            border: 2px solid #493900;
+
+            border-radius: 20px;
+
+            padding: 32px 20px;
+
+            box-shadow:
+                0 0 25px #ffcc0010;
+
+            transition: .3s;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+
+            border-color: var(--gold);
+
+            box-shadow:
+                0 10px 35px #ffcc0025,
+                0 0 30px #ff990022;
+        }
+
+        /* ICON */
+
+        .icon {
+            font-size: 65px;
+            margin-bottom: 12px;
+
+            filter:
+                drop-shadow(
+                    0 0 12px #ffcc00
+                );
+        }
+
+        .card h2 {
+            color: var(--gold);
+            font-size: 22px;
+            margin-bottom: 8px;
+        }
+
+        .username {
+            color: #ddd;
+            font-size: 15px;
+            margin-bottom: 22px;
+            direction: ltr;
+        }
+
+        /* OWNER */
+
+        .owner-card {
+            border-color: #c99b00;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    #241d00,
+                    #0d0d0d
+                );
+
+            box-shadow:
+                0 0 30px #ffcc0020;
+        }
+
+        .owner-card:hover {
+            border-color: #ffe45c;
+
+            box-shadow:
+                0 0 40px #ffcc0044;
+        }
+
+        .owner-badge {
+            display: inline-block;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #ffe65a,
+                    #ffae00
+                );
+
+            color: #111;
+
+            padding: 5px 15px;
+
+            border-radius: 20px;
+
+            font-size: 12px;
+
+            font-weight: 900;
+
+            margin-bottom: 15px;
+
+            box-shadow:
+                0 0 15px #ffcc0066;
+        }
+
+        /* BUTTON */
+
+        .gold-button {
+            display: inline-block;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #ffe65a,
+                    #ffb800,
+                    #ff9500
+                );
+
+            color: #111;
+
+            padding: 12px 22px;
+
+            border-radius: 12px;
+
+            font-size: 14px;
+
+            font-weight: 900;
+
+            box-shadow:
+                0 5px 20px #ffb90044;
+
+            transition: .3s;
+        }
+
+        .gold-button:hover {
+            transform:
+                translateY(-4px)
+                scale(1.03);
+
+            box-shadow:
+                0 8px 30px #ffcc0088,
+                0 0 25px #ff990055;
+        }
+
+        /* BACK */
+
+        .back {
+            margin-top: 35px;
+        }
+
+        .back a {
+            color: #aaa;
+            font-size: 14px;
+            transition: .3s;
+        }
+
+        .back a:hover {
+            color: var(--gold);
+        }
+
+        /* FOOTER */
+
+        footer {
+            position: relative;
+            z-index: 2;
+
+            text-align: center;
+
+            background: #101010;
+
+            border-top: 2px solid var(--gold);
+
+            padding: 22px;
+
+            color: #777;
+
+            font-size: 12px;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 600px) {
+
+            .title {
+                font-size: 34px;
+            }
+
+            .subtitle {
+                font-size: 13px;
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <!-- STARS -->
+
+    <div class="background">
+
+        <span class="star"></span>
+        <span class="star"></span>
+        <span class="star"></span>
+        <span class="star"></span>
+        <span class="star"></span>
+        <span class="star"></span>
+        <span class="star"></span>
+        <span class="star"></span>
+
+    </div>
+
+    <!-- HEADER -->
+
+    <header>
+
+        <div class="logo">
+            👑 ANIMAL RUSH
+        </div>
+
+    </header>
+
+    <!-- MAIN -->
+
+    <main>
+
+        <div class="support-container">
+
+            <div class="title">
+                🎧 پشتیبانی
+            </div>
+
+            <div class="subtitle">
+                برای ارتباط با تیم Animal Rush یکی از گزینه‌های زیر را انتخاب کنید
+            </div>
+
+            <div class="cards">
+
+                <!-- CHANNEL -->
+
+                <div class="card">
+
+                    <div class="icon">
+                        📢
+                    </div>
+
+                    <h2>
+                        کانال Animal Rush
+                    </h2>
+
+                    <div class="username">
+                        animalrashb
+                    </div>
+
+                    <a
+                        class="gold-button"
+                        href="https://rubika.ir/animalrashb"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        📢 ورود به کانال
+                    </a>
+
+                </div>
+
+
+                <!-- OWNER -->
+
+                <div class="card owner-card">
+
+                    <div class="icon">
+                        👑
+                    </div>
+
+                    <div class="owner-badge">
+                        👑 مالک
+                    </div>
+
+                    <h2>
+                        @rokh221
+                    </h2>
+
+                    <div class="username">
+                        مالک Animal Rush
+                    </div>
+
+                    <a
+                        class="gold-button"
+                        href="https://rubika.ir/rokh221"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        💬 ارتباط با مالک
+                    </a>
+
+                </div>
+
+
+                <!-- ADMIN -->
+
+                <div class="card">
+
+                    <div class="icon">
+                        🛡️
+                    </div>
+
+                    <h2>
+                        ادمین
+                    </h2>
+
+                    <div class="username">
+                        arsalangamer1
+                    </div>
+
+                    <a
+                        class="gold-button"
+                        href="https://rubika.ir/arsalangamer1"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        💬 ارتباط با ادمین
+                    </a>
+
+                </div>
+
+            </div>
+
+            <!-- BACK -->
+
+            <div class="back">
+
+                <a href="index.html">
+                    ← بازگشت به صفحه اصلی
+                </a>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        © 2026 Animal Rush | تمامی حقوق محفوظ است
+
+    </footer>
+
+</body>
+
+</html>
